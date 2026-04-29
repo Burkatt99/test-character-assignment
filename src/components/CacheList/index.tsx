@@ -35,7 +35,11 @@ const CacheList = (props: ICacheListProps) => {
               }}
             />
 
-            <MiniAvatar src={character.image} $isSelected={isSelected} />
+            <MiniAvatar
+              src={character.image}
+              $isSelected={isSelected}
+              loading="lazy"
+            />
           </ImgBox>
         );
       })}

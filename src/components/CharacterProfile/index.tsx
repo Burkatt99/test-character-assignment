@@ -34,7 +34,7 @@ const CharacterProfile = (props: ICharacterProfileProps) => {
           <Loader data-testid="loader" />
         </AvatarLoader>
       ) : (
-        <Avatar src={imgSrc} alt="Character Avatar" />
+        <Avatar src={imgSrc} alt="Character Avatar" loading="lazy" />
       )}
 
       {character && !isLoading && !error && (

@@ -24,8 +24,8 @@ interface IUseCharacterCacheProps {
 export const useCharacterCache = ({
   clearSearch,
 }: IUseCharacterCacheProps): IUseCharacterCache => {
-  const [cache, setCache] = useState<CacheCharacters>(loadCache().cache);
-  const [order, setOrder] = useState<number[]>(loadCache().order);
+  const [cache, setCache] = useState<CacheCharacters>(() => loadCache().cache);
+  const [order, setOrder] = useState<number[]>(() => loadCache().order);
 
   const isExpired = (entry: ICacheEntry) =>
     Date.now() - entry.cachedAt > entry.ttl;
