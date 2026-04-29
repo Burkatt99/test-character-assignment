@@ -104,8 +104,6 @@ export const useCharacterCache = ({
       },
     };
 
-    console.log("dfdf", nextCache, nextOrder);
-
     if (nextOrder.length > MAX_CACHE_SIZE) {
       const removed = nextOrder[0];
 
