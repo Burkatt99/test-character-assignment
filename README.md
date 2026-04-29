@@ -77,6 +77,13 @@ The project uses [Husky](https://typicode.github.io/husky) for automatic checks:
 
 Hooks are set up automatically after `yarn install` via the `prepare` script.
 
+> **Note:** If hooks are not running, execute the following commands manually:
+> ```bash
+> git config core.hooksPath .husky
+> chmod +x .husky/pre-commit
+> chmod +x .husky/pre-push
+> ```
+
 ## Project Structure
 ```
 src/
